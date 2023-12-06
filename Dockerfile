@@ -13,3 +13,5 @@ FROM openjdk:17.0.2-jdk-slim-buster
 
 WORKDIR /workspace/app
 COPY --from=builder /workspace/app/build/libs/healthcheck-*.jar app.jar
+
+ENTRYPOINT java -jar app.jar
